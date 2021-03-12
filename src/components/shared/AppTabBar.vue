@@ -23,4 +23,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .v-card__text {
+    display: flex;
+    justify-content: space-evenly;
+  }
+</style>

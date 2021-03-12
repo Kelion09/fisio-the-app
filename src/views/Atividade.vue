@@ -1,9 +1,11 @@
 <template>
-    <div align="center">
-        <v-container id="atividade" fluid>
-            <v-app-bar flat prominent color="transparent">
+    <div class="atividade" align="center">
+        <v-container fluid>
+            <v-app-bar flat height="70px" color="transparent">
                 <v-app-bar-nav-icon>
-                    <v-icon @click="back">mdi-chevron-left</v-icon>
+                    <router-link to="/">
+                        <v-icon>mdi-chevron-left</v-icon>
+                    </router-link>
                 </v-app-bar-nav-icon>
             </v-app-bar>
             
@@ -20,24 +22,24 @@
 
             <v-simple-table>
                 <template v-slot:default>
-                    <thead>
+                    <thead >
                         <tr>
-                            <th class="text-left">
+                            <th class="text-h5">
                                 Séries
                             </th>
-                            <th class="text-left">
+                            <th class="text-h5">
                                 Repetições
                             </th>
-                            <th class="text-left">
+                            <th class="text-h5">
                                 Descanso
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td> 1 </td>
-                            <td> 10 </td>
-                            <td> 20 seg </td>
+                            <td class="text-h5 text-center"> 1 </td>
+                            <td class="text-h5 text-center"> 10 </td>
+                            <td class="text-h5 text-center"> 20 seg </td>
                         </tr>
                     </tbody>
                 </template>
@@ -49,29 +51,30 @@
 
 <script>
 export default {
-    name: 'Atividade',
-    methods: {
-        back() {
-            
-        }
-    }
+    name: 'Atividade'
 }
 </script>
 
 <style scoped>
+    .atividade a {
+        color: #9E2D8C;
+        text-decoration: none;
+    }
+
     .imagem {
         max-width: 70vw;
     }
 
     h2 {
         font-family: Roboto;
-        font-weight: 300;
+        font-weight: normal;
+        font-size: x-large;     
         padding: 30px;
     }
 
     .text-atividade{
         color: grey;
-        font-weight: 500;
+        font-weight: normal;
     }
 
     .text-btn {
@@ -82,7 +85,6 @@ export default {
         color: #850091;
         font-family: Roboto;
         font-weight: 450;
-        font-size: 21;
         margin-top: 50px;
         display: flex;
         justify-content: space-around;
@@ -90,5 +92,5 @@ export default {
 
     .theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th {
         border-bottom: none;
-}
+    }
 </style>

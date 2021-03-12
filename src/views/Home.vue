@@ -11,14 +11,16 @@
     <div>
       <p class="msg-start-training">Vamos iniciar o seu treinamento? :)</p>
     </div>
-    <div align="center">
-      <v-btn
-        class="btn-iniciar-tratamento"
-        elevation="5"
-        color="#5B3FFF"
-        >
-          Iniciar tratamento
-        </v-btn>
+    <div class="btn-start-training" align="center">
+      <router-link to="/atividade">
+        <v-btn
+          class="btn-iniciar-tratamento"
+          elevation="5"
+          color="#5B3FFF"
+          >
+            Iniciar Tratamento
+          </v-btn>
+        </router-link>
     </div>
 
   </v-container>
@@ -33,6 +35,10 @@ export default {
 <style scoped>
 * {
   padding: 2%;
+}
+
+.home-imagem {
+  margin-top: 50px;
 }
 
 .welcome {
@@ -52,11 +58,17 @@ export default {
   color: gray;
 }
 
+ .btn-start-training a {
+  text-decoration: none;
+}
+
 .btn-iniciar-tratamento {
+  text-transform: none;
   align-content: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
+  font-size: x-large;
   color: white;
 }
 
